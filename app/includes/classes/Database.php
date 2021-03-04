@@ -94,8 +94,8 @@ class Database
             }
 
             if ($this->query->execute()) {
-                $this->results = $this->query->fetchAll(PDO::FETCH_OBJ);
-                $this->count   = $this->query->rowCount();
+                    $this->results = $this->query->fetchAll(PDO::FETCH_OBJ);
+                    $this->count   = $this->query->rowCount();
             } else {
                 $this->error = true;
             }
@@ -186,7 +186,7 @@ class Database
 
         if (!$this->query($sql, $fields)->error())
         {
-            return true;
+            return $this->lastId();
         }
         return false;
     }

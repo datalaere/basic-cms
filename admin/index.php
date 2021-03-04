@@ -2,6 +2,15 @@
 
 require '../app/bootstrap.php';
 
-$posts = $app['db']->table('posts')->get(['*'], [], ['ORDER BY' => 'created DESC'])->results();
+$request = request_query();
 
-var_dump($posts);
+if($request) {
+
+    require 'create.php';
+    require 'read.php';
+    require 'update.php';
+
+} else {
+
+    include APP_VIEWS . '/backend/admin.php';
+}

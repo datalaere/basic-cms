@@ -16,6 +16,8 @@
         <p>Sorry, no page found.</p>
     <?php endif; ?>
 
+    <p><a href="<?php e(APP_URL); ?>/">Back</a></p>
+
 <?php include APP_VIEWS . '/frontend/templates/footer.php'; ?>
 
         
