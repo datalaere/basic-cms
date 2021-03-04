@@ -9,7 +9,7 @@ if($request['action'] == 'update' && empty($_POST)) {
 
 if($request['action'] == 'update' && !empty($_POST)) {
 
-    $app['db']->table($request['type'])->update('ID', $request['id'], [
+    $app['db']->table($request['type'])->update('ID', $_POST['id'], [
         'title' => $_POST['title'],
         'slug' => $_POST['slug'],
         'body' => $_POST['body'],

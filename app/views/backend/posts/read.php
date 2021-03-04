@@ -20,7 +20,7 @@
                 <td><?php e($post->title); ?></td>
                 <td><a href="<?php e(APP_URL) ?>/index.php?id=<?php e($post->ID); ?>"><?php e($post->slug); ?></a></td>
                 <td><a href="<?php e(APP_URL) ?>/admin/index.php?action=update&id=<?php e($post->ID); ?>&type=<?php e($request['type']); ?>">Edit</a></td>
-                <td><a href="">Delete</a></td>
+                <td><a onclick="return confirm('Are you sure?')" href="<?php e(APP_URL) ?>/admin/index.php?action=delete&id=<?php e($post->ID); ?>&type=<?php e($request['type']); ?>">Delete</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

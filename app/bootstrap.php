@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 define('APSPATH', __DIR__);
 
 ini_set('display_errors', true);

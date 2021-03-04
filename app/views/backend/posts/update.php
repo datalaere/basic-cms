@@ -17,7 +17,7 @@
         Body
         <textarea name="body" id="body" cols="30" rows="10"><?php e($post->body); ?></textarea>
     </label>
-
+    <input type="hidden" name="id" value="<?php e($post->ID); ?>">
     <input type="submit" value="Update">
 </form>
 
